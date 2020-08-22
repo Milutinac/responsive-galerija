@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive galerija</title>
+  <style>
+    body {
+      width: 1024px;
+      font-family: sans-serif;
+      margin: 50px auto;
+      align-items: stretch;
+
+
+    }
+
+    .grid-container {
+      max-width: 960px;
+      width: 90%;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-areas: "header"
+                           "article"
+                           "footer";
+      grid-row-gap: 10%;
+    }
+    article{
+      display: grid;
+      width: inherit;
+      grid-template-columns: 145px 145px 145px 145px 145px;
+      grid-auto-rows: 120px;
+      grid-gap: 50px;
+    }
+    header{
+      max-width: inherit;
+      font-size: 2rem;
+    }
+    footer{
+      max-width: inherit;
+    
+    }
+    
+    
+    @media screen and (max-width: 960px) {
+      footer{
+        grid-template-columns: auto;
+      }
+      article{
+        grid-template-columns: 145px 145px 145px 145px 145px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      footer{
+        grid-template-columns: auto;
+      }
+      article{
+          grid-template-columns: 145px 145px 145px;
+      }
+    }
+
+    @media screen and (max-width: 414px) {
+       footer{
+         grid-template-columns: auto;
+      }
+      article{
+        grid-template-columns: 145px;
+      }
+    }
+
+
+
+    .box {
+      background: url(placeholder-image.png), linear-gradient(rgb(28, 231, 231) 80%, rgb(246 231 231) 20%);
+      background-size: contain;
+      box-shadow: 1px 1px 8px 3px whitesmoke;
+      border-radius: 8px;
+    }
+
+
+
+    .image-text {
+      text-align: center;
+      transform: translateY(450%);
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="grid-container">
+    <header>Gallery heading</header>
+    <article>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    <div class="box">
+      <p class="image-text">Image Title</p>
+    </div>
+    </article>
+   <footer> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+    anim id est laborum."</footer>
+  </div>
+  
+</body>
+
+</html>
